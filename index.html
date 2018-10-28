@@ -538,16 +538,16 @@ function AddDayAndTemerature(InputDays, InputHours) {
         break;
       case 4:
         console.log("Thu, " + Output.list[InputHours].main.temp + "°C")
-        document.querySelector("div.Text.Obj" + InputDays).innerHTML = "Thu, " + Output.list[InputHours].main.temp + "°C"
+        document.querySelector("div.Text.Obj" + InputDays).innerHTML = "Thu, " + Math.round(Output.list[InputHours].main.temp) + "°C"
         break;
       case 5:
       console.log(InputHours)
         console.log("Fri, " + Output.list[InputHours].main.temp + "°C")
-        document.querySelector("div.Text.Obj" + InputDays).innerHTML = "Fri, " + Output.list[InputHours].main.temp + "°C"
+        document.querySelector("div.Text.Obj" + InputDays).innerHTML = "Fri, " + Math.round(Output.list[InputHours].main.temp) + "°C"
         break;
       case 6:
         console.log("Sat, " + Output.list[InputHours].main.temp + "°C")
-        document.querySelector("div.Text.Obj" + InputDays).innerHTML = "Sat, " + Output.list[InputHours].main.temp + "°C"
+        document.querySelector("div.Text.Obj" + InputDays).innerHTML = "Sat, " + Math.round(Output.list[InputHours].main.temp) + "°C"
         break;
     }
 }
