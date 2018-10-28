@@ -459,7 +459,7 @@ function checkTime(i) {
     return i;
 }
 
-var city = "London" // Replace London with your City
+var city = "Silver Spring" // Replace London with your City
 let url = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=metric&APPID=22d4e741c978538ccba7d43999bb6441"; //change metric to imperial to change units, go to line 519 
 
 var Output;
@@ -520,34 +520,34 @@ function AddDayAndTemerature(InputDays, InputHours) {
 
   switch (((new Date().getDay()) + InputDays) % 7) {
       case 0:
-        console.log("Sunday, " + Output.list[InputHours].main.temp + "C°")
-        document.querySelector("div.Text.Obj" + InputDays).innerHTML = "Sunday, " + Output.list[InputHours].main.temp + "C°" // Change the C° for another unit; 
+        console.log("Sun, " + Output.list[InputHours].main.temp + "°C")
+        document.querySelector("div.Text.Obj" + InputDays).innerHTML = "Sun, " + Math.round(Output.list[InputHours].main.temp) + "°C" // Change the °C for another unit; 
         // use Math.floor(Output.list[InputHours].main.temp + 0.5) instead of Output.list[InputHours].main.temp to round the numbers
         break;
       case 1:
-        console.log("Monday, " + Output.list[InputHours].main.temp + "C°")
-        document.querySelector("div.Text.Obj" + InputDays).innerHTML = "Monday, " + Output.list[InputHours].main.temp + "C°"
+        console.log("Mon, " + Output.list[InputHours].main.temp + "°C")
+        document.querySelector("div.Text.Obj" + InputDays).innerHTML = "Mon, " + Math.round(Output.list[InputHours].main.temp) + "°C"
         break;
       case 2:
-        console.log("Tuesday, " + Output.list[InputHours].main.temp + "C°")
-        document.querySelector("div.Text.Obj" + InputDays).innerHTML = "Tuesday, " + Output.list[InputHours].main.temp + "C°"
+        console.log("Tue, " + Output.list[InputHours].main.temp + "°C")
+        document.querySelector("div.Text.Obj" + InputDays).innerHTML = "Tue, " + Math.round(Output.list[InputHours].main.temp) + "°C"
         break;
       case 3:
-        console.log("Wednesday, " + Output.list[InputHours].main.temp + "C°")
-        document.querySelector("div.Text.Obj" + InputDays).innerHTML = "Wednesday, " + Output.list[InputHours].main.temp + "C°"
+        console.log("Wed, " + Output.list[InputHours].main.temp + "°C")
+        document.querySelector("div.Text.Obj" + InputDays).innerHTML = "Wed, " + Math.round(Output.list[InputHours].main.temp) + "°C"
         break;
       case 4:
-        console.log("Thursday, " + Output.list[InputHours].main.temp + "C°")
-        document.querySelector("div.Text.Obj" + InputDays).innerHTML = "Thursday, " + Output.list[InputHours].main.temp + "C°"
+        console.log("Thu, " + Output.list[InputHours].main.temp + "°C")
+        document.querySelector("div.Text.Obj" + InputDays).innerHTML = "Thu, " + Output.list[InputHours].main.temp + "°C"
         break;
       case 5:
       console.log(InputHours)
-        console.log("Friday, " + Output.list[InputHours].main.temp + "C°")
-        document.querySelector("div.Text.Obj" + InputDays).innerHTML = "Friday, " + Output.list[InputHours].main.temp + "C°"
+        console.log("Fri, " + Output.list[InputHours].main.temp + "°C")
+        document.querySelector("div.Text.Obj" + InputDays).innerHTML = "Fri, " + Output.list[InputHours].main.temp + "°C"
         break;
       case 6:
-        console.log("Saturday, " + Output.list[InputHours].main.temp + "C°")
-        document.querySelector("div.Text.Obj" + InputDays).innerHTML = "Saturday, " + Output.list[InputHours].main.temp + "C°"
+        console.log("Sat, " + Output.list[InputHours].main.temp + "°C")
+        document.querySelector("div.Text.Obj" + InputDays).innerHTML = "Sat, " + Output.list[InputHours].main.temp + "°C"
         break;
     }
 }
